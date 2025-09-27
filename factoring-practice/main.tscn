@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cul2vfl112fg6" path="res://factoring_theme.tres" id="2_0xm2m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
-font_size = 61
+font_size = 120
 
 [node name="main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -17,10 +17,10 @@ offset_bottom = 40.0
 
 [node name="TextEdit" type="TextEdit" parent="Control"]
 layout_mode = 0
-offset_left = 125.0
-offset_top = 144.0
-offset_right = 522.0
-offset_bottom = 233.0
+offset_left = 139.0
+offset_top = 214.0
+offset_right = 1011.0
+offset_bottom = 340.0
 theme = ExtResource("2_0xm2m")
 placeholder_text = "Enter factored form here"
 
@@ -35,10 +35,11 @@ label_settings = SubResource("LabelSettings_ig7tw")
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 170.0
-offset_top = 260.0
-offset_right = 465.0
-offset_bottom = 343.0
+offset_left = 297.0
+offset_top = 383.0
+offset_right = 843.0
+offset_bottom = 503.0
+theme = ExtResource("2_0xm2m")
 text = "Submit"
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
