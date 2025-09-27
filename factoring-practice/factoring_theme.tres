@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cul2vfl112fg6"]
+
+[ext_resource type="SystemFont" uid="uid://b8il0j75cxwcy" path="res://font.tres" id="1_i1f25"]
+
+[sub_resource type="SystemFont" id="SystemFont_i1f25"]
+
+[resource]
+default_font = SubResource("SystemFont_i1f25")
+default_font_size = 30
+Button/fonts/font = ExtResource("1_i1f25")
+TextEdit/fonts/font = ExtResource("1_i1f25")
