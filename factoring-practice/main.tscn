@@ -17,7 +17,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextEdit" type="TextEdit" parent="Control"]
+[node name="TextEdit" type="LineEdit" parent="Control"]
 layout_mode = 0
 offset_left = 139.0
 offset_top = 214.0
@@ -25,6 +25,9 @@ offset_right = 1011.0
 offset_bottom = 340.0
 theme = ExtResource("2_0xm2m")
 placeholder_text = "Enter factored form here"
+virtual_keyboard_type = 2
+clear_button_enabled = true
+caret_mid_grapheme = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0

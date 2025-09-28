@@ -9,5 +9,6 @@ default_font = SubResource("SystemFont_i1f25")
 default_font_size = 30
 Button/font_sizes/font_size = 70
 Button/fonts/font = ExtResource("1_i1f25")
+LineEdit/font_sizes/font_size = 70
 TextEdit/font_sizes/font_size = 70
 TextEdit/fonts/font = ExtResource("1_i1f25")

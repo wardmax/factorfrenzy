@@ -14,8 +14,8 @@ var start = 0
 var got_incorrect = false
 
 func _ready():
+	textbox.keep_editing_on_text_submit = true
 	pick_numbers()
-	
 	
 func pick_numbers():
 	var c1 = 0
@@ -41,6 +41,10 @@ func pick_numbers():
 	print(answers[0])
 	
 func _on_button_pressed() -> void:
+	check_answer()
+	
+		
+func check_answer():
 	textbox.text = textbox.text.replace(" ","")
 	if(textbox.text in answers):
 		got_correct = true
@@ -52,9 +56,10 @@ func _on_button_pressed() -> void:
 		got_incorrect = true
 		loss_audio.play()
 		RenderingServer.set_default_clear_color("630000")
-		
-
+	textbox.caret_column = textbox.text.length()
 func _process(delta: float) -> void:
+	if(Input.is_action_just_pressed("ui_text_submit")):
+		check_answer()
 	if(start > .8):
 		start = 0
 		got_correct = false
