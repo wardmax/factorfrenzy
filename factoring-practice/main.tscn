@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://tvfqodp0prm1"]
+[gd_scene load_steps=6 format=3 uid="uid://tvfqodp0prm1"]
 
 [ext_resource type="Script" uid="uid://c763o1b580c4b" path="res://factor_code.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://cul2vfl112fg6" path="res://factoring_theme.tres" id="2_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://dk1wadufwwmr6" path="res://Chipbell Game Loss 2.wav" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://cfxq1snobrb64" path="res://Chipbell Item 2.wav" id="3_h2yge"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
 font_size = 120
@@ -26,10 +28,10 @@ placeholder_text = "Enter factored form here"
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 84.0
+offset_left = 55.0
 offset_top = 33.0
-offset_right = 610.0
-offset_bottom = 117.0
+offset_right = 1090.0
+offset_bottom = 198.0
 text = "Factor: ax^2+bx+c"
 label_settings = SubResource("LabelSettings_ig7tw")
 
@@ -41,5 +43,18 @@ offset_right = 843.0
 offset_bottom = 503.0
 theme = ExtResource("2_0xm2m")
 text = "Submit"
+
+[node name="Label2" type="Label" parent="Control"]
+offset_left = 419.0
+offset_top = 532.0
+offset_right = 794.0
+offset_bottom = 695.0
+theme = ExtResource("2_0xm2m")
+
+[node name="win_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h2yge")
+
+[node name="loss_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1bvp3")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

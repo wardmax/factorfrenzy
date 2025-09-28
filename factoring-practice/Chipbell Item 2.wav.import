@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfxq1snobrb64"
+path="res://.godot/imported/Chipbell Item 2.wav-eebcfcdd29b9cec2e7735b138a4c2bd2.sample"
+
+[deps]
+
+source_file="res://Chipbell Item 2.wav"
+dest_files=["res://.godot/imported/Chipbell Item 2.wav-eebcfcdd29b9cec2e7735b138a4c2bd2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
