@@ -8,7 +8,7 @@ var rng = RandomNumberGenerator.new()
 @onready var win_audio = $win_audio
 @onready var loss_audio = $loss_audio
 
-var answer = 0
+var answers = []
 var got_correct = false
 var start = 0
 var got_incorrect = false
@@ -37,12 +37,12 @@ func pick_numbers():
 	if(c1 == 1): c1 = ""
 	if(c2 == 1): c2 = ""
 	label.text = "Factor: "+str(problem[0])+"x²+"+str(problem[1])+"x+"+str(problem[2])
-	answer = "("+str(c1)+"x+"+str(f1)+")("+str(c2)+"x+"+str(f2)+")"
-	print(answer)
+	answers = ["("+str(c1)+"x+"+str(f1)+")("+str(c2)+"x+"+str(f2)+")","("+str(c2)+"x+"+str(f2)+")("+str(c1)+"x+"+str(f1)+")"]
+	print(answers[0])
 	
 func _on_button_pressed() -> void:
 	textbox.text = textbox.text.replace(" ","")
-	if(answer == textbox.text):
+	if(textbox.text in answers):
 		got_correct = true
 		win_audio.play()
 		RenderingServer.set_default_clear_color("276221")
