@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://tvfqodp0prm1"]
+[gd_scene load_steps=8 format=3 uid="uid://tvfqodp0prm1"]
 
 [ext_resource type="Script" uid="uid://c763o1b580c4b" path="res://scripts/factor_code.gd" id="1_tbgi4"]
 [ext_resource type="Theme" uid="uid://cul2vfl112fg6" path="res://factoring_theme.tres" id="2_tefeu"]
 [ext_resource type="AudioStream" uid="uid://cfxq1snobrb64" path="res://sounds/Chipbell Item 2.wav" id="3_o6xl0"]
 [ext_resource type="AudioStream" uid="uid://dk1wadufwwmr6" path="res://sounds/Chipbell Game Loss 2.wav" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://1wyf4q7nr6u" path="res://scenes/problem_options.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://chueax34pscbx" path="res://scenes/keyboard.tscn" id="6_tefeu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
 font_size = 80
@@ -18,7 +19,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextEdit" type="LineEdit" parent="Control"]
+[node name="TextEdit" type="LineEdit" parent="Control" groups=["textbox"]]
 layout_mode = 0
 offset_left = 221.0
 offset_top = 150.0
@@ -43,12 +44,12 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 342.0
-offset_top = 275.0
-offset_right = 851.0
-offset_bottom = 366.0
+offset_left = 821.0
+offset_top = 422.0
+offset_right = 985.0
+offset_bottom = 521.0
 theme = ExtResource("2_tefeu")
-text = "Submit"
+text = "Enter"
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 0
@@ -60,10 +61,10 @@ theme = ExtResource("2_tefeu")
 
 [node name="problem options" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 933.0
-offset_top = 582.0
+offset_left = 979.0
+offset_top = 29.0
 offset_right = 1116.0
-offset_bottom = 626.0
+offset_bottom = 90.0
 text = "Problem options"
 
 [node name="win_audio" type="AudioStreamPlayer2D" parent="."]
@@ -71,6 +72,9 @@ stream = ExtResource("3_o6xl0")
 
 [node name="loss_audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_tipki")
+
+[node name="keyboard" parent="." instance=ExtResource("6_tefeu")]
+offset_right = -345.0
 
 [node name="problem_options" parent="." instance=ExtResource("5_85g3d")]
 visible = false

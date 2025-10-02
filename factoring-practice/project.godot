@@ -17,13 +17,10 @@ boot_splash/image="uid://dly4tx23lf735"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=3000
 
-[autoload]
-
-Globals="*res://scripts/Globals.gd"
-
 [global_group]
 
 options_scene=""
+textbox=""
 
 [input]
 

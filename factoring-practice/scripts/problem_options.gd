@@ -65,3 +65,7 @@ func is_prime(n: int) -> bool:
 		if n % i == 0:
 			return false
 	return true
+
+
+func _on_close_pressed() -> void:
+	self.visible = false

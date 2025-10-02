@@ -1,0 +1,169 @@
+[gd_scene load_steps=3 format=3 uid="uid://chueax34pscbx"]
+
+[ext_resource type="Script" uid="uid://cah8efhbnn3ln" path="res://mathkeys.gd" id="1_attx4"]
+[ext_resource type="Theme" uid="uid://q3dmw4b1qo1i" path="res://scenes/keyboard_theme.tres" id="1_kjofl"]
+
+[node name="keyboard" type="Control"]
+layout_mode = 3
+anchor_left = 0.335
+anchor_top = 0.5
+anchor_right = 0.628
+anchor_bottom = 0.846
+offset_left = 0.0799866
+offset_top = 111.0
+offset_right = 0.543945
+offset_bottom = 101.792
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kjofl")
+script = ExtResource("1_attx4")
+
+[node name="keyscontainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -39.0
+offset_right = 334.0
+offset_bottom = 221.0
+alignment = 1
+
+[node name="numberscontainer" type="VBoxContainer" parent="keyscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="third_row" type="HBoxContainer" parent="keyscontainer/numberscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="x" type="Button" parent="keyscontainer/numberscontainer/third_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_kjofl")
+text = "x"
+
+[node name="7" type="Button" parent="keyscontainer/numberscontainer/third_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "7"
+
+[node name="8" type="Button" parent="keyscontainer/numberscontainer/third_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "8"
+
+[node name="9" type="Button" parent="keyscontainer/numberscontainer/third_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "9"
+
+[node name="backspace" type="Button" parent="keyscontainer/numberscontainer/third_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "⌫"
+
+[node name="second_row" type="HBoxContainer" parent="keyscontainer/numberscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="lpar" type="Button" parent="keyscontainer/numberscontainer/second_row"]
+clip_contents = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_kjofl")
+text = "("
+
+[node name="4" type="Button" parent="keyscontainer/numberscontainer/second_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "4"
+
+[node name="5" type="Button" parent="keyscontainer/numberscontainer/second_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "5"
+
+[node name="6" type="Button" parent="keyscontainer/numberscontainer/second_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "6"
+
+[node name="plus" type="Button" parent="keyscontainer/numberscontainer/second_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_kjofl")
+text = "+"
+
+[node name="first_row" type="HBoxContainer" parent="keyscontainer/numberscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="rpar" type="Button" parent="keyscontainer/numberscontainer/first_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_kjofl")
+text = ")"
+
+[node name="1" type="Button" parent="keyscontainer/numberscontainer/first_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "1"
+
+[node name="2" type="Button" parent="keyscontainer/numberscontainer/first_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "2"
+
+[node name="3" type="Button" parent="keyscontainer/numberscontainer/first_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "3"
+
+[node name="minus" type="Button" parent="keyscontainer/numberscontainer/first_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_kjofl")
+text = "-"
+
+[node name="fourth_row" type="HBoxContainer" parent="keyscontainer/numberscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="left" type="Button" parent="keyscontainer/numberscontainer/fourth_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "←"
+
+[node name="0" type="Button" parent="keyscontainer/numberscontainer/fourth_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "0"
+
+[node name="right" type="Button" parent="keyscontainer/numberscontainer/fourth_row"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+text = "→"
+
+[node name="symbolscontainer" type="HBoxContainer" parent="keyscontainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="functionscontainer" type="HBoxContainer" parent="keyscontainer"]
+layout_mode = 2
+alignment = 1
