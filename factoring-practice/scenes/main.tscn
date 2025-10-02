@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://tvfqodp0prm1"]
+
+[ext_resource type="Script" uid="uid://c763o1b580c4b" path="res://scripts/factor_code.gd" id="1_tbgi4"]
+[ext_resource type="Theme" uid="uid://cul2vfl112fg6" path="res://factoring_theme.tres" id="2_tefeu"]
+[ext_resource type="AudioStream" uid="uid://cfxq1snobrb64" path="res://sounds/Chipbell Item 2.wav" id="3_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://dk1wadufwwmr6" path="res://sounds/Chipbell Game Loss 2.wav" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://1wyf4q7nr6u" path="res://scenes/problem_options.tscn" id="5_85g3d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
+font_size = 80
+
+[node name="main" type="Node"]
+script = ExtResource("1_tbgi4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="LineEdit" parent="Control"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 150.0
+offset_right = 954.0
+offset_bottom = 256.0
+theme = ExtResource("2_tefeu")
+placeholder_text = "Enter factored form here"
+virtual_keyboard_type = 2
+clear_button_enabled = true
+caret_mid_grapheme = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 3.0
+offset_right = 1095.0
+offset_bottom = 168.0
+text = "Factor: ax^2+bx+c"
+label_settings = SubResource("LabelSettings_ig7tw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 275.0
+offset_right = 851.0
+offset_bottom = 366.0
+theme = ExtResource("2_tefeu")
+text = "Submit"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 532.0
+offset_right = 794.0
+offset_bottom = 695.0
+theme = ExtResource("2_tefeu")
+
+[node name="problem options" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 582.0
+offset_right = 1116.0
+offset_bottom = 626.0
+text = "Problem options"
+
+[node name="win_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_o6xl0")
+
+[node name="loss_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_tipki")
+
+[node name="problem_options" parent="." instance=ExtResource("5_85g3d")]
+visible = false
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/problem options" to="." method="_on_problem_options_pressed"]

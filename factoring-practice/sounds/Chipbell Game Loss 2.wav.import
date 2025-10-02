@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dk1wadufwwmr6"
-path="res://.godot/imported/Chipbell Game Loss 2.wav-dd719cd50dbf3a066625557d3dda13d4.sample"
+path="res://.godot/imported/Chipbell Game Loss 2.wav-ca848639d511daaf28ceab581c3b5467.sample"
 
 [deps]
 
-source_file="res://Chipbell Game Loss 2.wav"
-dest_files=["res://.godot/imported/Chipbell Game Loss 2.wav-dd719cd50dbf3a066625557d3dda13d4.sample"]
+source_file="res://sounds/Chipbell Game Loss 2.wav"
+dest_files=["res://.godot/imported/Chipbell Game Loss 2.wav-ca848639d511daaf28ceab581c3b5467.sample"]
 
 [params]
 

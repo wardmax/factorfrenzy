@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wyf4q7nr6u"]
+
+[ext_resource type="Script" uid="uid://844dmyg2uaw6" path="res://scripts/problem_options.gd" id="1_nw71l"]
+
+[node name="problem_options" type="Control" groups=["options_scene"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 356.0
+offset_top = 64.0
+offset_right = -266.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nw71l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 2.0
+offset_right = 529.0
+offset_bottom = 485.0
+color = Color(0.4, 0.4, 0.4, 1)
+
+[node name="vbox1" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 38.0
+offset_right = 122.0
+offset_bottom = 387.0
+
+[node name="a_values label" type="Label" parent="vbox1"]
+layout_mode = 2
+text = "Select possible a-values"
+
+[node name="1" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "1"
+
+[node name="2" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "2"
+
+[node name="3" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "3"
+
+[node name="4" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "4"
+
+[node name="5" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "5"
+
+[node name="6" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "6"
+
+[node name="7" type="CheckBox" parent="vbox1"]
+layout_mode = 2
+text = "7"
+
+[node name="all" type="Button" parent="vbox1"]
+layout_mode = 2
+text = "Select all"
+
+[node name="none" type="Button" parent="vbox1"]
+layout_mode = 2
+text = "Select None"
+
+[node name="prime" type="Button" parent="vbox1"]
+layout_mode = 2
+text = "Select primes"
+
+[node name="vbox2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 40.0
+offset_right = 549.0
+offset_bottom = 143.0
+
+[node name="Label" type="Label" parent="vbox2"]
+layout_mode = 2
+text = "More options"
+
+[node name="gcf" type="CheckBox" parent="vbox2"]
+layout_mode = 2
+text = "include GCF"
+
+[node name="difference of squares" type="CheckBox" parent="vbox2"]
+visible = false
+layout_mode = 2
+text = "Difference of squares"
+
+[connection signal="pressed" from="vbox1/all" to="." method="_on_all_pressed"]
+[connection signal="pressed" from="vbox1/none" to="." method="_on_none_pressed"]
+[connection signal="pressed" from="vbox1/prime" to="." method="_on_prime_pressed"]

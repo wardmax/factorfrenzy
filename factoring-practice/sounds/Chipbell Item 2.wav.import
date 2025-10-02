@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cfxq1snobrb64"
-path="res://.godot/imported/Chipbell Item 2.wav-eebcfcdd29b9cec2e7735b138a4c2bd2.sample"
+path="res://.godot/imported/Chipbell Item 2.wav-66a3a306761334b68ced59c0dfe4e081.sample"
 
 [deps]
 
-source_file="res://Chipbell Item 2.wav"
-dest_files=["res://.godot/imported/Chipbell Item 2.wav-eebcfcdd29b9cec2e7735b138a4c2bd2.sample"]
+source_file="res://sounds/Chipbell Item 2.wav"
+dest_files=["res://.godot/imported/Chipbell Item 2.wav-66a3a306761334b68ced59c0dfe4e081.sample"]
 
 [params]
 
