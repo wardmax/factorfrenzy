@@ -66,7 +66,7 @@ func get_and_display_new_problem():
 
 func build_problem(gcf,a,c1,c2,f1,f2):
 	var a_value = gcf*a
-	var b_value = gcf*c1*f2+c2*f1
+	var b_value = gcf*(c1*f2+c2*f1)
 	var c_value = gcf*f1*f2
 	if(a_value==1):
 		label.text = "x²+"+str(b_value)+"x+"+str(c_value)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://chueax34pscbx"]
+[gd_scene load_steps=4 format=3 uid="uid://chueax34pscbx"]
 
 [ext_resource type="Script" uid="uid://cah8efhbnn3ln" path="res://mathkeys.gd" id="1_attx4"]
 [ext_resource type="Theme" uid="uid://q3dmw4b1qo1i" path="res://scenes/keyboard_theme.tres" id="1_kjofl"]
+[ext_resource type="Texture2D" uid="uid://cb21lwdhjjl4a" path="res://backspace_small_white.png" id="3_a8m4y"]
 
 [node name="keyboard" type="Control"]
 layout_mode = 3
@@ -70,7 +71,8 @@ custom_minimum_size = Vector2(120, 60)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("1_kjofl")
-text = "⌫"
+icon = ExtResource("3_a8m4y")
+icon_alignment = 1
 
 [node name="second_row" type="HBoxContainer" parent="keyscontainer/numberscontainer"]
 layout_mode = 2
