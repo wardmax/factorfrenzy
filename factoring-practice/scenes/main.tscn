@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://tvfqodp0prm1"]
+[gd_scene load_steps=11 format=3 uid="uid://tvfqodp0prm1"]
 
 [ext_resource type="Script" uid="uid://c763o1b580c4b" path="res://scripts/factor_code.gd" id="1_tbgi4"]
 [ext_resource type="Theme" uid="uid://cul2vfl112fg6" path="res://factoring_theme.tres" id="2_tefeu"]
 [ext_resource type="AudioStream" uid="uid://cfxq1snobrb64" path="res://sounds/Chipbell Item 2.wav" id="3_o6xl0"]
 [ext_resource type="FontFile" uid="uid://cb6y608iub8q3" path="res://font/arialbd.ttf" id="3_tipki"]
+[ext_resource type="Texture2D" uid="uid://1cgko871tj51" path="res://scripts/setting_small_white.png" id="4_85g3d"]
 [ext_resource type="AudioStream" uid="uid://dk1wadufwwmr6" path="res://sounds/Chipbell Game Loss 2.wav" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://1wyf4q7nr6u" path="res://scenes/problem_options.tscn" id="5_85g3d"]
+[ext_resource type="Texture2D" uid="uid://beeupii4gsj2r" path="res://scripts/refresh_small_white.png" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://chueax34pscbx" path="res://scenes/keyboard.tscn" id="6_tefeu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
@@ -36,10 +38,11 @@ caret_mid_grapheme = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
+offset_left = -15.0
 offset_top = -12.0
-offset_right = 647.0
+offset_right = 632.0
 offset_bottom = 153.0
-text = "Factor: ax^2+bx+c"
+text = " ax^2+bx+c"
 label_settings = SubResource("LabelSettings_ig7tw")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -55,21 +58,23 @@ text = "Enter"
 
 [node name="problem options" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 927.0
-offset_right = 608.0
-offset_bottom = 1030.0
+offset_left = 390.0
+offset_top = 924.0
+offset_right = 510.0
+offset_bottom = 1044.0
 theme = ExtResource("2_tefeu")
-text = "Problem options"
+icon = ExtResource("4_85g3d")
+icon_alignment = 1
 
 [node name="refresh" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 1037.0
-offset_right = 565.0
-offset_bottom = 1140.0
+offset_left = 523.0
+offset_top = 923.0
+offset_right = 643.0
+offset_bottom = 1043.0
 theme = ExtResource("2_tefeu")
-text = "New problem"
+icon = ExtResource("5_choun")
+icon_alignment = 1
 
 [node name="keyboard" parent="Control" instance=ExtResource("6_tefeu")]
 layout_mode = 1

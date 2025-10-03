@@ -69,9 +69,9 @@ func build_problem(gcf,a,c1,c2,f1,f2):
 	var b_value = gcf*c1*f2+c2*f1
 	var c_value = gcf*f1*f2
 	if(a_value==1):
-		label.text = "Factor: x²+"+str(b_value)+"x+"+str(c_value)
+		label.text = "x²+"+str(b_value)+"x+"+str(c_value)
 	else:
-		label.text = "Factor: "+str(gcf*a)+"x²+"+str(b_value)+"x+"+str(c_value)
+		label.text = ""+str(gcf*a)+"x²+"+str(b_value)+"x+"+str(c_value)
 	
 func build_answers(gcf,a,c1,c2,f1,f2):
 	if(gcf == 1): gcf = ""
