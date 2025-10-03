@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://1wyf4q7nr6u"]
+[gd_scene load_steps=3 format=3 uid="uid://1wyf4q7nr6u"]
 
 [ext_resource type="Script" uid="uid://844dmyg2uaw6" path="res://scripts/problem_options.gd" id="1_nw71l"]
+
+[sub_resource type="Theme" id="Theme_nw71l"]
+Button/font_sizes/font_size = 32
+CheckBox/font_sizes/font_size = 32
+Label/font_sizes/font_size = 32
 
 [node name="problem_options" type="Control" groups=["options_scene"]]
 layout_mode = 3
@@ -11,9 +16,10 @@ anchor_bottom = 0.51
 offset_left = -116.328
 offset_top = -5.048
 offset_right = -0.216064
-offset_bottom = 0.479919
+offset_bottom = 60.4799
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nw71l")
 script = ExtResource("1_nw71l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -21,19 +27,23 @@ layout_mode = 0
 offset_left = -2.0
 offset_top = 5.0
 offset_right = 529.0
-offset_bottom = 485.0
+offset_bottom = 658.0
 color = Color(0.4, 0.4, 0.4, 1)
+
+[node name="a_values label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 401.0
+offset_bottom = 83.0
+text = "Select possible a-values"
 
 [node name="vbox1" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 38.0
-offset_top = 38.0
-offset_right = 122.0
-offset_bottom = 387.0
-
-[node name="a_values label" type="Label" parent="vbox1"]
-layout_mode = 2
-text = "Select possible a-values"
+offset_top = 54.0
+offset_right = 401.0
+offset_bottom = 653.0
 
 [node name="1" type="CheckBox" parent="vbox1"]
 layout_mode = 2
@@ -77,10 +87,10 @@ text = "Select primes"
 
 [node name="vbox2" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 304.0
-offset_top = 40.0
-offset_right = 549.0
-offset_bottom = 143.0
+offset_left = 284.0
+offset_top = 182.0
+offset_right = 490.0
+offset_bottom = 300.0
 
 [node name="Label" type="Label" parent="vbox2"]
 layout_mode = 2
