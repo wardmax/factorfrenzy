@@ -1,6 +1,8 @@
-[gd_resource type="Theme" format=3 uid="uid://q3dmw4b1qo1i"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://q3dmw4b1qo1i"]
+
+[ext_resource type="FontFile" uid="uid://cb6y608iub8q3" path="res://font/arialbd.ttf" id="1_86ws8"]
 
 [resource]
 Button/constants/h_separation = 20
 Button/font_sizes/font_size = 60
-Button/fonts/font = null
+Button/fonts/font = ExtResource("1_86ws8")

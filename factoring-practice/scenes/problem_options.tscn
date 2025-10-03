@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://1wyf4q7nr6u"]
+[gd_scene load_steps=4 format=3 uid="uid://1wyf4q7nr6u"]
 
 [ext_resource type="Script" uid="uid://844dmyg2uaw6" path="res://scripts/problem_options.gd" id="1_nw71l"]
+[ext_resource type="FontFile" uid="uid://c5d6yp7gh3xvr" path="res://font/arial.ttf" id="1_p2fl4"]
 
 [sub_resource type="Theme" id="Theme_nw71l"]
 Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_p2fl4")
 CheckBox/font_sizes/font_size = 32
+CheckBox/fonts/font = ExtResource("1_p2fl4")
 Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_p2fl4")
 
 [node name="problem_options" type="Control" groups=["options_scene"]]
 layout_mode = 3

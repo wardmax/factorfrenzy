@@ -1,15 +1,14 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cul2vfl112fg6"]
 
-[ext_resource type="SystemFont" uid="uid://b8il0j75cxwcy" path="res://font.tres" id="1_i1f25"]
-
-[sub_resource type="SystemFont" id="SystemFont_i1f25"]
+[ext_resource type="FontFile" uid="uid://c5d6yp7gh3xvr" path="res://font/arial.ttf" id="1_3pmx5"]
+[ext_resource type="FontFile" uid="uid://cb6y608iub8q3" path="res://font/arialbd.ttf" id="1_jddmw"]
 
 [resource]
-default_font = SubResource("SystemFont_i1f25")
 default_font_size = 30
 Button/font_sizes/font_size = 69
-Button/fonts/font = ExtResource("1_i1f25")
+Button/fonts/font = ExtResource("1_jddmw")
 CheckBox/font_sizes/font_size = 32
-LineEdit/font_sizes/font_size = 43
+LineEdit/font_sizes/font_size = 50
+LineEdit/fonts/font = ExtResource("1_3pmx5")
 TextEdit/font_sizes/font_size = 70
-TextEdit/fonts/font = ExtResource("1_i1f25")
+TextEdit/fonts/font = null

@@ -29,6 +29,10 @@ window/stretch/aspect="expand"
 options_scene=""
 textbox=""
 
+[gui]
+
+theme/custom_font="uid://c5d6yp7gh3xvr"
+
 [input]
 
 enter={
