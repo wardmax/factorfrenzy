@@ -118,7 +118,7 @@ func _process(delta: float) -> void:
 
 
 func _on_problem_options_pressed() -> void:
-	$problem_options.visible = !$problem_options.visible
+	$Control/problem_options.visible = !$Control/problem_options.visible
 
 
 func _on_refresh_pressed() -> void:
