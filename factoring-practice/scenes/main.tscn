@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://chueax34pscbx" path="res://scenes/keyboard.tscn" id="6_tefeu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
-font_size = 80
+font_size = 60
 
 [node name="main" type="Node"]
 script = ExtResource("1_tbgi4")
@@ -21,10 +21,10 @@ offset_bottom = 40.0
 
 [node name="TextEdit" type="LineEdit" parent="Control" groups=["textbox"]]
 layout_mode = 0
-offset_left = 221.0
-offset_top = 150.0
-offset_right = 954.0
-offset_bottom = 256.0
+offset_left = 33.0
+offset_top = 136.0
+offset_right = 618.0
+offset_bottom = 239.0
 theme = ExtResource("2_tefeu")
 placeholder_text = "Enter factored form here"
 virtual_keyboard_type = 2
@@ -33,10 +33,9 @@ caret_mid_grapheme = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 3.0
-offset_right = 1095.0
-offset_bottom = 168.0
+offset_top = -12.0
+offset_right = 647.0
+offset_bottom = 153.0
 text = "Factor: ax^2+bx+c"
 label_settings = SubResource("LabelSettings_ig7tw")
 horizontal_alignment = 1
@@ -44,10 +43,10 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 821.0
-offset_top = 422.0
-offset_right = 985.0
-offset_bottom = 521.0
+offset_left = 224.0
+offset_top = 561.0
+offset_right = 445.0
+offset_bottom = 622.0
 theme = ExtResource("2_tefeu")
 text = "Enter"
 
@@ -61,11 +60,19 @@ theme = ExtResource("2_tefeu")
 
 [node name="problem options" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 979.0
-offset_top = 29.0
-offset_right = 1116.0
-offset_bottom = 90.0
+offset_left = 443.0
+offset_top = 757.0
+offset_right = 580.0
+offset_bottom = 818.0
 text = "Problem options"
+
+[node name="refresh" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 687.0
+offset_right = 578.0
+offset_bottom = 744.0
+text = "New problem"
 
 [node name="win_audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_o6xl0")
@@ -74,10 +81,25 @@ stream = ExtResource("3_o6xl0")
 stream = ExtResource("4_tipki")
 
 [node name="keyboard" parent="." instance=ExtResource("6_tefeu")]
-offset_right = -345.0
+anchor_left = 0.353
+anchor_top = 0.25
+anchor_right = 0.676
+anchor_bottom = 0.443
+offset_left = -60.744
+offset_top = 28.0
+offset_right = -270.048
+offset_bottom = 195.048
 
 [node name="problem_options" parent="." instance=ExtResource("5_85g3d")]
 visible = false
+anchor_left = 0.093
+anchor_right = 0.906
+anchor_bottom = 0.543
+offset_left = -0.264
+offset_top = 16.952
+offset_right = -0.0880127
+offset_bottom = 0.463928
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/problem options" to="." method="_on_problem_options_pressed"]
+[connection signal="pressed" from="Control/refresh" to="." method="_on_refresh_pressed"]
